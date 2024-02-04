@@ -14,15 +14,19 @@ export const uploadPhoto = async (
 ) => {
   const respond = new Respond(res);
   try {
+
+    // TODO add implementation for saving profile photo
+
     if (!req.file) throw new Error("Profile photo required");
 
+    /*
     await uploadFile(req.file);
 
     await unlinkFile(req.file.path);
 
-    const imgUrl = await getImageUrl(req.file.filename);
+    const imgUrl = await getImageUrl(req.file.filename);*/
 
-    res.locals.profileImageUrl = imgUrl;
+    res.locals.profileImageUrl = "https://style.shockvisual.net/wp-content/uploads/2021/06/sos-mex.jpg";
     next();
   } catch (error) {
     return respond.error(error);
