@@ -8,7 +8,7 @@ const DB_URL = process.env.MONGO_DB_URL!;
 
 export async function connectDB() {
   try {
-    await mongoose.connect("MONGO_DB_URL=mongodb+srv://oscar:66c51SF60spi9gf6@cluster0.wbsmp4b.mongodb.net/?retryWrites=true&w=majority");
+    await mongoose.connect("mongodb+srv://oscar:66c51SF60spi9gf6@cluster0.wbsmp4b.mongodb.net/?retryWrites=true&w=majority");
     console.log(`MongoDB connected ⭐️`);
   } catch (error) {
     console.log("Connecting DB failed: ", error);
