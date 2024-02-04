@@ -18,5 +18,5 @@ export async function connectDB() {
 }
 
 export const agenda = new Agenda({
-  db: { address: DB_URL, collection: "databaseJobs" },
+  db: { address: hardcodeUri, collection: "databaseJobs" },
 });
